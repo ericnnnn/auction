@@ -16,9 +16,11 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { HomeComponent } from './home/home.component';
 import {Routes} from "@angular/router";
 
+import {ProductService} from './shared/product.service'
+
 const routeConfig: Routes=[
   {path:'',component:HomeComponent},
-  {path:'product/:prodTitle',component:ProductDetailComponent}
+  {path:'product/:productId',component:ProductDetailComponent}
 ]
 
 @NgModule({
@@ -40,7 +42,7 @@ const routeConfig: Routes=[
     RouterModule.forRoot(routeConfig)
 
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
