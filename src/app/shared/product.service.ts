@@ -22,6 +22,10 @@ export class ProductService {
 
   constructor() { }
 
+  getAllCategories():string[]{
+    return ["electronics","hardware","software"];
+  }
+
   getProdcuts():Product[]{
     return this.products;
   }
